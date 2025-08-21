@@ -1,9 +1,8 @@
-"use client";
-import Navbar from "./components/navbar";
-import ContactMe from "./pages/contactMe";
-import MainContent from "./pages/mainContent";
-
-export default function Home() {
+"use client"
+import Content3 from "../pages/content3";
+import Navbar from "../components/navbar";
+import ContactMe from "../pages/contactMe";
+export default function tes3() {
   return (
     <>
       <div className="bg-indigo-100 min-h-screen px-7 max-w-max container mx-auto ">
@@ -12,13 +11,14 @@ export default function Home() {
         </div>
         <div className="font-robotSlab">
           <div className="min-h-screen">
-            <MainContent />
+            <Content3 /> 
+          </div>
+          <div>
+            <ContactMe />
           </div>
         </div>
       </div>
-      <div>
-        <ContactMe />
-      </div>
+      
     </>
   );
 }

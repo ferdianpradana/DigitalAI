@@ -1,9 +1,7 @@
-"use client";
-import Navbar from "./components/navbar";
-import ContactMe from "./pages/contactMe";
-import MainContent from "./pages/mainContent";
-
-export default function Home() {
+import Content1 from "../pages/content1";
+import Navbar from "../components/navbar";
+import ContactMe from "../pages/contactMe";
+export default function tes2() {
   return (
     <>
       <div className="bg-indigo-100 min-h-screen px-7 max-w-max container mx-auto ">
@@ -12,13 +10,14 @@ export default function Home() {
         </div>
         <div className="font-robotSlab">
           <div className="min-h-screen">
-            <MainContent />
+            <Content1 /> 
+          </div>
+          <div>
+            <ContactMe />
           </div>
         </div>
       </div>
-      <div>
-        <ContactMe />
-      </div>
+      
     </>
   );
 }
