@@ -12,6 +12,7 @@ interface CardProps {
   time?: string;
   publish_date?: string;
   pubDate?: string;
+  publish_at?: string;
 }
 
 const About: FC<CardProps> = ({
@@ -22,6 +23,7 @@ const About: FC<CardProps> = ({
   url,
   publish_date,
   pubDate,
+  publish_at
 }) => {
   return (
     <div className="min-h-full  max-w-full shadow-lg shadow-indigo-900/100 border-0 bg-white border-blue-950 rounded-2xl p-4 flex flex-col justify-between content-center items-center">
@@ -40,10 +42,10 @@ const About: FC<CardProps> = ({
         <div className="flex flex-col justify-center items-center w-full">
           <div className="flex justify-between w-full text-gray-600 font-light pt-2">
             <p>
-              {date || publish_date?.split(" ")[0] || pubDate?.split(" ")[0]}
+              {date || publish_date?.split("T")[0] || pubDate?.split(" ")[0] ||""}
             </p>
             <p>
-              {time || publish_date?.split(" ")[1] || pubDate?.split(" ")[1] || ""}
+              {time || publish_date?.substring(0, 10) || pubDate?.split(" ")[1] || ""}
             </p>
           </div>
           <div className="py-2 w-full">
